@@ -12,14 +12,15 @@
   },
   "dependencies": {
     "@aws-amplify/ui-vue": "^4.2.21",
+    "amplify": "^0.0.11",
     "amplify-vue-template": "file:",
     "aws-amplify": "^6.6.5",
     "bootstrap": "^5.3.3",
     "vue": "^3.5.12"
   },
   "devDependencies": {
-    "@aws-amplify/backend": "^1.0.4",
-    "@aws-amplify/backend-cli": "^1.1.1",
+    "@aws-amplify/backend": "^1.5.0",
+    "@aws-amplify/backend-cli": "^1.2.9",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.12.5",
     "@vitejs/plugin-vue": "^5.0.4",
@@ -30,7 +31,7 @@
     "esbuild": "^0.20.2",
     "npm-run-all2": "^6.1.2",
     "tsx": "^4.7.2",
-    "typescript": "^5.4.5",
+    "typescript": "^5.6.3",
     "vite": "^5.2.8",
     "vue-tsc": "^2.0.11"
   }

@@ -21,18 +21,24 @@ function deleteTodo(id: string) {
     client.models.Todo.delete({ id })
   }
 
-function createTodo() {
-  client.models.Todo.create({
-    content: window.prompt("Todo content")
-  }).then(() => {
-    // After creating a new todo, update the list of todos
-    listTodos();
-  });
+  function fetchTodos() {
+  client.models.Todo.observeQuery().subscribe({
+    next: ({ items, isSynced }) => {
+      todos.value = items
+     },
+  }); 
 }
+  async function createTodo() {
+  await client.models.Todo.create({
+    content: window.prompt("Todo content?"),
+    isDone: false
+  })
+
+  }
     
 // fetch todos when the component is mounted
- onMounted(() => {
-  listTodos();
+onMounted(() => {
+  fetchTodos();
 });
 
 </script>
